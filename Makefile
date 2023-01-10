@@ -23,6 +23,7 @@ install:
 	udevadm control --reload
 	systemctl restart systemd-udevd.service
 	systemctl daemon-reload
+	chmod +s /usr/local/bin/dvorak
 
 uninstall:
 	rm /usr/local/bin/dvorak
