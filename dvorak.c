@@ -4,15 +4,15 @@
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
- * 
+ *
  *     http://www.apache.org/licenses/LICENSE-2.0
- * 
+ *
  * Unless required by applicable law or agreed to in writing, software
  * distributed under the License is distributed on an "AS IS" BASIS,
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- * 
+ *
  */
 
 /*
@@ -120,59 +120,11 @@ static int umlaut2dvorak(int key) {
     }
 }
 
-//from: https://github.com/kentonv/dvorak-qwerty/tree/master/unix
+// Only remap left-handed QWERTY shortcuts
 static int qwerty2dvorak(int key) {
     switch (key) {
-        case KEY_MINUS:
-            return KEY_APOSTROPHE;
-        case KEY_EQUAL:
-            return KEY_RIGHTBRACE;
-        case KEY_Q:
-            return KEY_X;
-        case KEY_W:
-            return KEY_COMMA;
-        case KEY_E:
-            return KEY_D;
-        case KEY_R:
-            return KEY_O;
-        case KEY_T:
-            return KEY_K;
-        case KEY_Y:
-            return KEY_T;
-        case KEY_U:
-            return KEY_F;
-        case KEY_I:
-            return KEY_G;
-        case KEY_O:
-            return KEY_S;
-        case KEY_P:
-            return KEY_R;
-        case KEY_LEFTBRACE:
-            return KEY_MINUS;
-        case KEY_RIGHTBRACE:
-            return KEY_EQUAL;
-        case KEY_A:
-            return KEY_A;
         case KEY_S:
             return KEY_SEMICOLON;
-        case KEY_D:
-            return KEY_H;
-        case KEY_F:
-            return KEY_Y;
-        case KEY_G:
-            return KEY_U;
-        case KEY_H:
-            return KEY_J;
-        case KEY_J:
-            return KEY_C;
-        case KEY_K:
-            return KEY_V;
-        case KEY_L:
-            return KEY_P;
-        case KEY_SEMICOLON:
-            return KEY_Z;
-        case KEY_APOSTROPHE:
-            return KEY_Q;
         case KEY_Z:
             return KEY_SLASH;
         case KEY_X:
@@ -181,18 +133,6 @@ static int qwerty2dvorak(int key) {
             return KEY_I;
         case KEY_V:
             return KEY_DOT;
-        case KEY_B:
-            return KEY_N;
-        case KEY_N:
-            return KEY_L;
-        case KEY_M:
-            return KEY_M;
-        case KEY_COMMA:
-            return KEY_W;
-        case KEY_DOT:
-            return KEY_E;
-        case KEY_SLASH:
-            return KEY_LEFTBRACE;
         default:
             return key;
     }
